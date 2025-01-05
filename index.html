@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashmal Macknojia</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="hero-header">
+            <div class="wrapper">
+                <header>
+                    <div class="logo">
+                        <div class="logo-text">Ash</div>
+                    </div>
+                    <nav>
+                        <div class="togglebtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="navlinks">
+                            <li><a href="#" class="b">Home</a></li>
+                            <li><a href="Ash's Resume.pdf" class="bt">Resume</a></li>
+                            <li><a href="#contactMe" class="btn3">Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="container">
+                    <div class="profile-pic">
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQGdUp8apJUt2g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1676492189003?e=1736985600&v=beta&t=mr2R1o5pZx1999vj967hCfGjosATMwklEo1Wf0oKOI0" alt="Profile Pic" height="300" width="290">
+                    </div>
+
+                    <div class="profile-text">
+                        <h5 style="margin-bottom: 25px;">Undergraduate Student at the <span>University of Houston College of Natural Sciences & Mathematics</span></h5>
+                        <script>
+                            const element = document.querySelector(".profile-text h5");
+                            const text = element.textContent.trim();
+
+                            const speed = 100;
+                            const pause = 1000;
+
+                            function animateText(){
+                                let index = 0;
+                                element.textContent = "";
+
+                                const interval = setInterval(() => {
+                                    if (index < text.length) {
+                                        element.textContent += text[index];
+                                        index++;
+                                    } else {
+                                        clearInterval(interval); 
+                                        setTimeout(() => {
+                                            reverseText(); 
+                                        }, pause);
+                                    }
+                                }, speed);
+                            }
+
+                            function reverseText() {
+                                const spans = element.querySelectorAll("span");
+                                let index = text.length;
+
+                                const interval = setInterval(() => {
+                                    if (index > 0) {
+                                        element.textContent = text.slice(0, index - 1);
+                                        index--;
+                                    }
+                                    else{
+                                        clearInterval(interval);
+                                        setTimeout(() => {
+                                            animateText();
+                                        }, pause);
+                                    }
+                                }, speed);
+                            }
+
+                            animateText();
+
+                        </script>
+                        <h1 style="margin-bottom: 25px;">Ashmal Macknojia</h1>
+                        <p style="margin-bottom: 25px;">
+                            Hello! My name is Ashmal Macknojia and I’m currently a junior at the University of Houston, where I’m majoring in Computer Science 
+                            and double minoring in Business Administration & Mathematics. I love to be 
+                            productive during my spare time and build relationships with one another 
+                            as I feel passionate about meeting new people, learning new things, 
+                            and being open to expanding my professional network. 
+                            Please feel free to contact me with any Data Science or Data Analytics internship opportunities and connect with me on Linkedin!
+                        </p>
+                    </div>
+
+                    <!--<footer>
+                        <div class="btn-group">
+                            <a href="Ash's Resume.pdf" target="blank" class="btn active">Download CV</a>
+                            <a href="#" class="btn">Contact</a>
+                        </div>
+                    </footer>-->
+
+                    <footer>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/ashmal-macknojia-278209217/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/akmackn2/"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </footer>
+
+                    <section id="contactMe" class="contactMe">
+                        <h3>Contact Me</h3>
+                        <p>I'm always open to hearing from you. Please feel free to reach out with anything!</p>
+
+                        <form class="contactMeButton" action="https://formsubmit.co/el/baxeca" method="POST">
+                            <input type="hidden" name="_next" value="https://github.com/akmackn2/">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="name" name="name" placeholder="Your Name" required>
+                            <input type="email address" name="email" placeholder="Your Email Address" required>
+                            <textarea name="message" placeholder="Your Message" required rows="20" cols="50" style="resize: none;"></textarea>
+                            <button type="submit" class="submitButton">Submit</button>
+                            
+                        </form>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
