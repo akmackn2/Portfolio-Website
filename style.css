@@ -369,7 +369,7 @@ footer .social a:hover {
 
 .skills-grid {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 20px; 
     justify-content: center; 
     align-items: center; 
