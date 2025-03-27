@@ -24,7 +24,6 @@ body {
     padding: 0 20px;
 }
 
-
 header {
     position: fixed; 
     width: 100%; 
@@ -39,7 +38,6 @@ header {
     padding: 15px 20px; 
     transition: .5s; 
 }
-
 
 header.scrolled {
     background-color: white; 
@@ -130,7 +128,7 @@ nav .navlinks li a:hover {
     flex-direction: column;
 }
 
-.profile-text h5{
+.profile-text h5 {
     text-align: center;
     color: red;
     font-size: 14px;
@@ -150,7 +148,6 @@ nav .navlinks li a:hover {
 .profile-text p {
     color: #505050;
 }
-
 
 .btn-group {
     margin: 50px 0; 
@@ -178,7 +175,6 @@ nav .navlinks li a:hover {
     border-color: white;
 }
 
-
 footer .social {
     margin-top: 5px; 
     text-align: center;
@@ -196,13 +192,13 @@ footer .social a:hover {
     transform: rotate(360deg);
 }
 
-.contactMe h3{
+.contactMe h3 {
     text-align: center;
     margin-top: 95px;
     font-size: 27px;
 }
 
-.contactMe p{
+.contactMe p {
     text-align: center;
     margin-top: 15px;
 }
@@ -338,46 +334,6 @@ footer .social a:hover {
     }
 }
 
-@media (max-width: 768px) {
-    .wrapper {
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    .container {
-        padding-top: 6rem;
-        text-align: center; 
-    }
-
-    .container .profile-pic {
-        width: 180px;
-        height: 180px;
-        border: 8px solid #444;
-        margin: 20px auto; 
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .profile-text h1 {
-        font-size: 2rem;
-    }
-
-    .profile-text h5 {
-        font-size: 12px;
-    }
-
-    .contactMeButton input,
-    .contactMeButton textarea {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .contactMeButton .submitButton {
-        font-size: 16px;
-        padding: 10px;
-    }
-}
-
-
 @media (max-width: 480px) {
     .container .profile-pic {
         width: 150px;
@@ -402,4 +358,43 @@ footer .social a:hover {
     .contactMeButton .submitButton {
         font-size: 14px;
     }
+}
+
+.skills-title {
+    text-align: center; 
+    font-size: 2rem; 
+    margin-top: 120px;
+    margin-bottom: 30px; 
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.skill-box {
+    background: #a3cfff; 
+    border-radius: 12px; 
+    text-align: center;
+    transition: ease 0.5s;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    border: 2px solid black; 
+    max-width: 450px;
+    width: 95%;
+    margin: 0 auto; 
+    flex-wrap: wrap;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.skill-box:hover {
+    background: #80bfff; 
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
 }
