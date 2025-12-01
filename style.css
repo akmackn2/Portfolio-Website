@@ -12,6 +12,9 @@ html {
 
 body {
     overflow-x: hidden;
+    background-color: #020617;
+    color: #e5e7eb;
+    padding-top: 72px;
 }
 
 .hero-header {
@@ -32,12 +35,23 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
+    background: rgba(15, 23, 42, 0.96);
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(18px);
 }
 
 header.scrolled {
     background: rgba(15, 23, 42, 0.96);
     box-shadow: 0 18px 45px rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(18px);
+}
+
+header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .logo {
@@ -61,8 +75,16 @@ header.scrolled {
     color: white;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
 nav .navlinks {
     list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
 nav .navlinks li {
@@ -76,6 +98,11 @@ nav .navlinks li a {
     font-weight: 500;
     white-space: nowrap;
     transition: color 0.2s ease;
+    padding: 8px 0;
+}
+
+nav .navlinks li a:hover {
+    color: #38bdf8;
 }
 
 .container {
@@ -273,6 +300,19 @@ nav .navlinks li a {
         padding: 0 15px;
     }
 
+    body {
+        padding-top: 64px;
+    }
+
+    header .wrapper {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    nav .navlinks {
+        gap: 12px;
+    }
+
     .container {
         padding-top: 7rem;
     }
@@ -311,5 +351,13 @@ nav .navlinks li a {
     .contactMeButton .submitButton {
         font-size: 14px;
     }
-}
 
+    nav .navlinks {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    nav .navlinks li {
+        flex: 0 0 auto;
+    }
+}
