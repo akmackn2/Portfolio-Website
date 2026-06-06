@@ -11,160 +11,292 @@
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ashmal Macknojia</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body class="min-h-screen bg-slate-950 text-slate-50 antialiased">
-    <div class="hero-header relative overflow-hidden">
-        <div class="pointer-events-none absolute -top-40 -left-32 h-80 w-80 rounded-full bg-sky-500/30 blur-3xl"></div>
-        <div class="pointer-events-none absolute top-1/3 -right-40 h-96 w-96 rounded-full bg-purple-500/25 blur-3xl"></div>
-        <div class="pointer-events-none absolute bottom-[-6rem] left-1/2 -translate-x-1/2 h-72 w-[26rem] rounded-full bg-emerald-500/15 blur-3xl"></div>
 
-        <div class="wrapper relative z-10">
-            <header class="fixed inset-x-0 top-0 z-50 bg-transparent transition-all duration-300">
-                <div class="wrapper flex items-center justify-between py-3">
-                    <div class="flex items-center gap-3">
-                        <div class="logo shadow-lg">
-                            <div class="logo-text">Ash</div>
-                        </div>
-                    </div>
-                    <nav>
-                        <div class="togglebtn sm:hidden">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <ul class="navlinks hidden sm:flex items-center gap-6 text-sm font-medium">
-                            <li><a href="" class="b hover:text-sky-400">Home</a></li>
-                            <li>
-                                <!-- This opens in a new tab -->
-                                <a href="Ash's Resume.pdf"
-                                   class="bt px-4 py-2 rounded-full bg-sky-500 text-white shadow-md hover:bg-sky-400 transition"
-                                   target="_blank" rel="noopener noreferrer">
-                                   Resume
-                                </a>
-                            </li>
-                            <li><a href="#skills-section" class="btn2 hover:text-sky-400">Skills</a></li> 
-                            <li><a href="#contactMe" class="btn3 hover:text-sky-400">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+<body>
+    <div class="hero-header">
+        <div class="background-blur blur-one"></div>
+        <div class="background-blur blur-two"></div>
+        <div class="background-blur blur-three"></div>
 
-            <div class="container pt-32 pb-16 flex flex-col items-center">
-                <div class="relative w-full max-w-3xl">
-                    <div class="pointer-events-none absolute -inset-[1px] rounded-3xl bg-gradient-to-r from-sky-500/70 via-emerald-400/50 to-purple-500/70 opacity-70 blur-sm"></div>
-                    <div class="relative bg-slate-900/80 backdrop-blur-xl rounded-3xl shadow-[0_24px_80px_rgba(15,23,42,0.95)] px-6 sm:px-10 py-10 flex flex-col items-center gap-8 border border-slate-800/90">
-                        <div class="profile-pic">
-                            <img src="./Ash's Profile Pic.jpg" alt="Profile Pic" height="300" width="290">
-                        </div>
-
-                        <div class="profile-text flex flex-col items-center text-center space-y-4 max-w-3xl">
-                            <h5 class="px-4">
-                                Undergraduate CS Student at the <span>University of Houston College of Natural Sciences & Mathematics</span>
-                            </h5>
-
-                            <script>
-                                const element = document.querySelector(".profile-text h5");
-                                const text = element.textContent.trim();
-
-                                const speed = 100;
-                                const pause = 1000;
-
-                                function animateText(){
-                                    let index = 0;
-                                    element.textContent = "";
-
-                                    const interval = setInterval(() => {
-                                        if (index < text.length) {
-                                            element.textContent += text[index];
-                                            index++;
-                                        } else {
-                                            clearInterval(interval); 
-                                            setTimeout(() => {
-                                                reverseText(); 
-                                            }, pause);
-                                        }
-                                    }, speed);
-                                }
-
-                                function reverseText() {
-                                    const spans = element.querySelectorAll("span");
-                                    let index = text.length;
-
-                                    const interval = setInterval(() => {
-                                        if (index > 0) {
-                                            element.textContent = text.slice(0, index - 1);
-                                            index--;
-                                        }
-                                        else{
-                                            clearInterval(interval);
-                                            setTimeout(() => {
-                                                animateText();
-                                            }, pause);
-                                        }
-                                    }, speed);
-                                }
-
-                                animateText();
-                            </script>
-
-                            <h1 class="text-3xl sm:text-4xl font-bold text-slate-50">Ashmal Macknojia</h1>
-                            <p class="leading-relaxed text-slate-300 text-sm sm:text-base">
-                                Hello! My name is Ashmal Macknojia, and I graduated from the University of Houston with a B.S. in Computer Science, along with double minors in Business Administration & Mathematics. I love to be productive during my spare time and build relationships with one another as I feel passionate about meeting new people, learning new things, and being open to expanding my professional network. During Summer 2025, I had the opportunity of interning at Archrock (NYSE: AROC) as an IT Intern. While attending UH as a full-time student, I also had the opportunity to work for the university’s IT department for their IT Help Desk role. In addition, I served as the Corporate Relations Chair for IEEE-NSM there, a student organization primarily dedicated to helping Computer Science students grow their technical skills through practical workshops, coding competitions, exam reviews, and professional development opportunities. Feel free to connect with me via LinkedIn as I’m always happy to hear from y’all!
-                            </p>
-                        </div>
-
-                        <div class="social mt-4">
-                            <a href="https://www.linkedin.com/in/ashmal-macknojia-278209217/" aria-label="LinkedIn">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/akmackn2/" aria-label="GitHub">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
+        <header>
+            <div class="wrapper nav-wrapper">
+                <div class="logo">
+                    <div class="logo-text">Ash</div>
                 </div>
 
-                <footer class="w-full mt-16">
-                    <h4 class="skills-title text-slate-50">Skills</h4>
+                <nav>
+                    <button class="togglebtn" aria-label="Toggle navigation menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
 
-                    <div class="skills-grid" id="skills-section"> 
-                        <div class="skill-box">Microsoft Azure</div>
-                        <div class="skill-box">Microsoft Intune</div>
-                        <div class="skill-box">Troubleshooting</div>
-                        <div class="skill-box">Technical Support</div>
-                        <div class="skill-box">Endpoint Management</div>
-                        <div class="skill-box">Microsoft Excel</div>
-                        <div class="skill-box">Powershell</div>
-                        <div class="skill-box">IT Customer Service</div>
-                    </div>
-                </footer>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
 
-                <section id="contactMe" class="contactMe w-full max-w-2xl mx-auto mt-16 mb-10 bg-slate-900/85 backdrop-blur-xl rounded-3xl shadow-[0_22px_70px_rgba(15,23,42,0.98)] px-6 sm:px-8 py-8 border border-slate-800/90">
-                    <h3>Contact Me</h3>
-                    <p>I'm always open to hearing from you. Please feel free to reach out with anything!</p>
+                        <li>
+                            <a href="Ash's Resume.pdf"
+                               class="resume-btn"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                               Resume
+                            </a>
+                        </li>
 
-                    <form class="contactMeButton" action="https://formsubmit.co/b7b29ac873671047cd23af0387ad938c" method="POST">
-                        <input type="hidden" name="_next" value="https://akmackn2.github.io/Portfolio-Website/">
-                        <input type="hidden" name="_captcha" value="false">
-
-                        <input type="name" name="name" placeholder="Your Name" required>
-                        <input type="email address" name="email" placeholder="Your Email Address" required>
-                        <textarea name="message" placeholder="Your Message" required rows="8" cols="50" style="resize: none;"></textarea>
-                        <button type="submit" class="submitButton">Submit</button>
-                    </form>
-                </section>
-
-                <h4 class="copyright text-center mt-2">Copyright © 2025 Built by Ashmal Macknojia</h4>
-
+                        <li><a href="#skills-section">Skills</a></li>
+                        <li><a href="#work-experience">Experience</a></li>
+                        <li><a href="#contactMe">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
+        </header>
+
+        <main class="wrapper main-content">
+            <section class="intro-section">
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <img src="./Ash's Profile Pic.jpg" alt="Ashmal Macknojia Profile Picture">
+                    </div>
+
+                    <div class="profile-text">
+                        <h5 id="typing-text">
+                            Undergraduate CS Student at the
+                            <span>University of Houston College of Natural Sciences & Mathematics</span>
+                        </h5>
+
+                        <h1>Ashmal Macknojia</h1>
+
+                        <p>
+                            Hello! My name is Ashmal Macknojia, and I graduated from the University of Houston with a B.S. in Computer Science, along with double minors in Business Administration & Mathematics. I love to be productive during my spare time and build relationships with one another as I feel passionate about meeting new people, learning new things, and being open to expanding my professional network. During Summer 2025, I had the opportunity of interning at Archrock (NYSE: AROC) as an IT Intern. While attending UH as a full-time student, I also had the opportunity to work for the university’s IT department for their IT Help Desk role. In addition, I served as the Corporate Relations Chair for IEEE-NSM there, a student organization primarily dedicated to helping Computer Science students grow their technical skills through practical workshops, coding competitions, exam reviews, and professional development opportunities. Feel free to connect with me via LinkedIn as I’m always happy to hear from y’all!
+                        </p>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/ashmal-macknojia-278209217/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://github.com/akmackn2/" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills-section" id="skills-section">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-box">Microsoft Azure</div>
+                    <div class="skill-box">Microsoft Intune</div>
+                    <div class="skill-box">Troubleshooting</div>
+                    <div class="skill-box">Technical Support</div>
+                    <div class="skill-box">Endpoint Management</div>
+                    <div class="skill-box">Microsoft Excel</div>
+                    <div class="skill-box">Powershell</div>
+                    <div class="skill-box">IT Customer Service</div>
+                </div>
+            </section>
+
+            <section class="work-experience" id="work-experience">
+                <h2 class="section-title">Work Experiences</h2>
+
+                <div class="timeline-shell">
+                    <div class="timeline-topbar">
+                        <p class="timeline-subtitle">Work Experiences</p>
+
+                        <div class="timeline-controls">
+                            <button class="timeline-arrow timeline-arrow-left" aria-label="Previous work experience">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+
+                            <button class="timeline-arrow timeline-arrow-right" aria-label="Next work experience">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="timeline-progress-wrap">
+                        <div class="timeline-progress"></div>
+                    </div>
+
+                    <div class="timeline-viewport">
+                        <div class="timeline-track">
+                            <article class="timeline-item">
+                                <div class="timeline-node"></div>
+
+                                <div class="timeline-card">
+                                    <div class="timeline-card-glow"></div>
+
+                                    <a class="timeline-logo" href="https://www.uh.edu/" target="_blank" rel="noopener noreferrer">
+                                        <img src="UH.jpg" alt="University of Houston Logo">
+                                    </a>
+
+                                    <div class="timeline-info">
+                                        <p class="timeline-date">September 2022 - Present</p>
+
+                                        <h3>IT Help Desk</h3>
+
+                                        <h4>
+                                            <a href="https://www.uh.edu/" target="_blank" rel="noopener noreferrer">
+                                                University of Houston
+                                            </a>
+                                        </h4>
+
+                                        <ul class="timeline-skills skills-count-5">
+                                            <li>Technical Support</li>
+                                            <li>Troubleshooting</li>
+                                            <li>IT</li>
+                                            <li>Communication</li>
+                                            <li>Customer Service</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item">
+                                <div class="timeline-node"></div>
+
+                                <div class="timeline-card">
+                                    <div class="timeline-card-glow"></div>
+
+                                    <a class="timeline-logo" href="https://www.pioneeronline.org/" target="_blank" rel="noopener noreferrer">
+                                        <img src="Pioneer.jpg" alt="Pioneer Mutual Federal Credit Union Logo">
+                                    </a>
+
+                                    <div class="timeline-info">
+                                        <p class="timeline-date">June 2023 - August 2023</p>
+
+                                        <h3>Intern</h3>
+
+                                        <h4>
+                                            <a href="https://www.pioneeronline.org/" target="_blank" rel="noopener noreferrer">
+                                                Pioneer Mutual Federal Credit Union
+                                            </a>
+                                        </h4>
+
+                                        <ul class="timeline-skills skills-count-4">
+                                            <li>Compliance</li>
+                                            <li>Member Service</li>
+                                            <li>Back Office</li>
+                                            <li>Teller</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item">
+                                <div class="timeline-node"></div>
+
+                                <div class="timeline-card">
+                                    <div class="timeline-card-glow"></div>
+
+                                    <a class="timeline-logo" href="https://www.archrock.com/" target="_blank" rel="noopener noreferrer">
+                                        <img src="Archrock.jpg" alt="Archrock Logo">
+                                    </a>
+
+                                    <div class="timeline-info">
+                                        <p class="timeline-date">June 2025 - August 2025</p>
+
+                                        <h3>IT Intern</h3>
+
+                                        <h4>
+                                            <a href="https://www.archrock.com/" target="_blank" rel="noopener noreferrer">
+                                                Archrock
+                                            </a>
+                                        </h4>
+
+                                        <ul class="timeline-skills skills-count-7">
+                                            <li>Powershell</li>
+                                            <li>Troubleshooting</li>
+                                            <li>Microsoft Azure</li>
+                                            <li>Network</li>
+                                            <li>Inventory Management</li>
+                                            <li>Microsoft Intune</li>
+                                            <li>Technical Support</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="timeline-item">
+                                <div class="timeline-node"></div>
+
+                                <div class="timeline-card">
+                                    <div class="timeline-card-glow"></div>
+
+                                    <a class="timeline-logo" href="https://www.ieee-nsm.com/" target="_blank" rel="noopener noreferrer">
+                                        <img src="IEEE-NSM.jpg" alt="IEEE-NSM Logo">
+                                    </a>
+
+                                    <div class="timeline-info">
+                                        <p class="timeline-date">August 2025 - May 2026</p>
+
+                                        <h3>Corporate Relations Chair</h3>
+
+                                        <h4>
+                                            <a href="https://www.ieee-nsm.com/" target="_blank" rel="noopener noreferrer">
+                                                IEEE-NSM
+                                            </a>
+                                        </h4>
+
+                                        <ul class="timeline-skills skills-count-4">
+                                            <li>Strategic Partnerships</li>
+                                            <li>Negotiation</li>
+                                            <li>Sponsorship Acquisition</li>
+                                            <li>Leadership</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="timeline-dots" aria-label="Timeline navigation">
+                        <button class="timeline-dot active" aria-label="Go to University of Houston experience"></button>
+                        <button class="timeline-dot" aria-label="Go to Pioneer experience"></button>
+                        <button class="timeline-dot" aria-label="Go to Archrock experience"></button>
+                        <button class="timeline-dot" aria-label="Go to IEEE-NSM experience"></button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contactMe" class="contactMe">
+                <h2 class="section-title">Contact Me</h2>
+
+                <p>
+                    I'm always open to hearing from you. Please feel free to reach out with anything!
+                </p>
+
+                <form class="contactMeButton" action="https://formsubmit.co/b7b29ac873671047cd23af0387ad938c" method="POST">
+                    <input type="hidden" name="_next" value="https://akmackn2.github.io/Portfolio-Website/">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <textarea name="message" placeholder="Your Message" required rows="8"></textarea>
+
+                    <button type="submit" class="submitButton">Submit</button>
+                </form>
+            </section>
+
+            <p class="copyright">
+                Copyright © 2025 Built by Ashmal Macknojia
+            </p>
+        </main>
     </div>
+
     <script src="script.js" defer></script>
 </body>
 </html>
