@@ -39,7 +39,7 @@ window.addEventListener("resize", function () {
 const typingElement = document.querySelector("#typing-text");
 
 if (typingElement) {
-    const fullText = "Undergraduate CS Student at the University of Houston College of Natural Sciences & Mathematics";
+    const fullText = "Computer Science graduate from the University of Houston College of Natural Sciences & Mathematics!";
     const speed = 100;
     const pause = 1000;
 
